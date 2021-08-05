@@ -23,7 +23,7 @@ router.get('/', (req, res) => {
 })
 
 //update 
-router.put(':/id', (req, res) => {
+router.put('/:id', (req, res) => {
   Movies.findByIdAndUpdate(req.params.id, req.body, {new:true}, (error, foundMovie) => {
     error?
     console.log(error)
