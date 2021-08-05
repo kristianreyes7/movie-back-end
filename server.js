@@ -17,7 +17,7 @@ app.use('/movies', movieController);
 app.listen(PORT, () => {
   console.log('listening...', PORT);
 })
-mongoose.connect('mongodb://localhost:27017/animalShelter',
+mongoose.connect('mongodb://localhost:27017/movies',
 {
   useNewUrlParser: true,
   useUnifiedTopology: true,
