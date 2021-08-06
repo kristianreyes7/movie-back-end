@@ -89,7 +89,12 @@ router.get('/seed', (req, res) => {
         review: "mehh",
         category: "Action",
       },
-    ]
+    ], (error, newData) => {
+       error?
+       console.log(error)
+       : 
+       res.json(newData); 
+    }
   )  
 })
 
