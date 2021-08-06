@@ -7,7 +7,7 @@ router.post('/', (req, res) => {
   Movies.create(req.body, (error, newMovie) => {
     error?
     console.log(error)
-    : 
+    :
     res.json(newMovie);
   })
 });
@@ -21,6 +21,7 @@ router.get('/', (req, res) => {
     res.json(foundMovie);
   })
 })
+
 //seed
 router.get('/seed', (req, res) => {
   Movies.create(
@@ -91,6 +92,25 @@ router.get('/seed', (req, res) => {
     ]
   )  
 })
+
+router.put('/:id', (req, res) => {
+  Movies.findByIdAndUpdate(req.params.id, req.body, {new:true}, (error, foundMovie) => {
+    error?
+    console.log(error)
+    :
+    res.json(foundMovie)
+  })
+})
+//delete
+router.delete('/:id', (req, res) => {
+  Movies.findByIdAndDelete(req.params.id, (error, deleteMovie) => {
+    error?
+    console.log(error)
+    :
+    res.json(deleteMovie);
+  })
+})
+
 //update 
 router.put('/:id', (req, res) => {
   Movies.findByIdAndUpdate(req.params.id, req.body, {new:true}, (error, foundMovie) => {
@@ -113,3 +133,5 @@ router.delete('/:id', (req, res) => {
 
 
 module.exports = router;
+
+
