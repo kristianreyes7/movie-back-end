@@ -28,7 +28,7 @@ router.get('/seed', (req, res) => {
     [
       {
         title: "Jungle Cruise",
-        image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fmovies.disney.com%2Fjungle-cruise&psig=AOvVaw28NQHWNmCxIAXZffancflv&ust=1628319773967000&source=images&cd=vfe&ved=0CAgQjRxqFwoTCNjL3f_pm_ICFQAAAAAdAAAAABAD",
+        image: "https://lumiere-a.akamaihd.net/v1/images/p_junglecruise_disneyplus_21363_f7fdd75b.jpeg",
         releaseDate: 2021,
         description: "Based on Disneyland's theme park ride where a small riverboat takes a group of travelers through a jungle filled with dangerous animals and reptiles but with a supernatural element.",
         rating: 3,
