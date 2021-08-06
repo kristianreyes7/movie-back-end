@@ -7,7 +7,7 @@ router.post('/', (req, res) => {
   Movies.create(req.body, (error, newMovie) => {
     error?
     console.log(error)
-    : 
+    :
     res.json(newMovie);
   })
 });
@@ -22,24 +22,25 @@ router.get('/', (req, res) => {
   })
 })
 
-//update 
+
 router.put('/:id', (req, res) => {
   Movies.findByIdAndUpdate(req.params.id, req.body, {new:true}, (error, foundMovie) => {
     error?
     console.log(error)
-    : 
+    :
     res.json(foundMovie)
-  })  
+  })
 })
 //delete
 router.delete('/:id', (req, res) => {
   Movies.findByIdAndDelete(req.params.id, (error, deleteMovie) => {
     error?
     console.log(error)
-    : 
+    :
     res.json(deleteMovie);
   })
 })
+
 
 //seed
 router.get('/seed', (req, res) => {
@@ -113,3 +114,5 @@ router.get('/seed', (req, res) => {
 })
 
 module.exports = router;
+
+
